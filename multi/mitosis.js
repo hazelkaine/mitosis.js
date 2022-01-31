@@ -18,7 +18,7 @@ function setup() {
         if (cells[i].clicked(mouseX,mouseY)) {
           cells.push(cells[i].mitosis());
           cells.push(cells[i].mitosis());
-          cells.splice(i,1);
+          //cells.splice(i,1);
         //console.log("CLICKED");
        }
     }
