@@ -1,6 +1,6 @@
 const cells = [];
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(500, 500);
   cells.push(new Cell());
   cells.push(new Cell());
 }
