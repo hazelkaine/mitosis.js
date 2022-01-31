@@ -1,17 +1,32 @@
-function Cell() {
-    this.pos= createVector(random(width), random(height));
-    this.r =  80;
-    this.c = color(random(100,255), 0, random (100,255));
 
-    this.move = function() {
-    var vel =p5.Vector.random2D();
-    this.pos.add(vel)
+var cells = [];
 
-    }
-
-    this.show = function() {
-      noStroke()
-        fill(this.c);
-    ellipse(this.pos.x, this.pos.y, this.r, this.r)
-    }
+function setup() {
+    createCanvas(400, 400);
+    cells.push(new Cell());
+    cells.push(new Cell());
 }
+  
+  
+  function draw() {
+    background(51);
+  
+    for (var i = 0; i<cells.length; i++){
+       cells[i].move();
+        cells[i].show();
+    }
+  }
+
+  function mousePressed() {
+    for (var i = cells.length-1; i>=0; i--){
+      if (cells[i].clicked(mouseX,mouseY)) {
+        cells.push(cells[i].mitosis());
+        cells.push(cells[i].mitosis());
+        cells.splice(i,1);
+       //console.log("CLICKED");
+      }  
+  }         
+  }
+
+
+
