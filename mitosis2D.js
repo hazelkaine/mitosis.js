@@ -22,7 +22,6 @@ function Cell(pos, r, c) {
  
  }
 
-
     this.move = function() {
         var vel =p5.Vector.random2D();
         this.pos.add(vel)
