@@ -19,7 +19,7 @@ function Cell(pos, r, c) {
  this.mitosis = function(){
     var cell = new Cell(this.pos, this.r/2, this.c);
      return cell;
-     return cell;
+ 
  }
 
 
