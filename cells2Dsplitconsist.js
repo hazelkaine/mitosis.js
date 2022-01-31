@@ -1,6 +1,6 @@
 const cells = [];
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(700, 700);
   cells.push(new Cell());
   cells.push(new Cell());
 }
@@ -31,7 +31,7 @@ function mousePressed() {
 }
 
 class Cell {
-  constructor(pos=createVector(random(width), random(height), 100), r=60, acc=p5.Vector.random2D()){
+  constructor(pos=createVector(random(width), random(height), 100), r=50, acc=p5.Vector.random2D()){
     this.pos = pos.copy();
     this.r = r;
     this.vel = createVector();
